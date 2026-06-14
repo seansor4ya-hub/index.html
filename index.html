@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mengenal Rumah Adat Desa Bawomataluo</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif};
+
+body{
+  background-color:#E6E6FA;
+  min-height:100vh;
+  padding-bottom:40px;
+}
+
+/* HEADER FOTO */
+.header-img{
+  width:100%;
+  height:35vh;
+  object-fit:cover;
+  display:block;
+}
+
+/* CONTAINER UTAMA */
+.container{
+  padding:20px;
+  max-width:500px;
+  margin:0 auto;
+  margin-top:-40px;
+  position:relative;
+  z-index:2;
+}
+
+/* CARD PINK */
+.main-card{
+  background: rgb(255,192, 203);
+  backdrop-filter: blur(15px);
+  border-radius: 28px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(0,105,180,0.15);
+  margin-bottom: 30px;
+  border: 2px solid rgba(0,180,216,0.2);
+}
+
+.main-card h1{
+  font-size: 1.5rem;
+  color: #A52A2A;
+  margin-bottom: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.main-card p{
+  font-size: 0.95rem;
+  color: #A52A2A;
+  line-height: 1.8;
+}
+
+/* JUDUL BAWAH */
+.section-title{
+  text-align:center;
+  font-size:1.35rem;
+  color:#8OOOOO;
+  font-weight:700;
+  margin-bottom:25px;
+}
+
+/* GRID TOMBOL */
+.btn-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+  margin-bottom:15px;
+}
+
+/* TOMBOL GRADIENT PINK */
+.btn{
+  background: linear-gradient(135deg, #A52A2A 0%, #A52A2A 100%);
+  color:#8OOOOO;
+  padding:18px 10px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:1rem;
+  text-align:center;
+  box-shadow:0 5px 15px rgba(0,180,216,0.4);
+  transition:.3s;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 22px rgba(0,180,216,0.6);
+}
+
+.btn-center{
+  grid-column:1/-1;
+  max-width:220px;
+  margin:0 auto;
+}
+
+/* SECTION ISI */
+section{
+  background: rgb(255,192, 293);
+  backdrop-filter: blur(15px);
+  border-radius: 28px;
+  padding: 30px 25px;
+  margin-top:30px;
+  display:none;
+  box-shadow: 0 12px 35px rgba(0,105,180,0.15);
+  border: 2px solid rgba(0,180,216,0.2);
+}
+
+section:target{display:block;animation:fadeIn .4s}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+section h2{
+  color: #8OOOOO;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+section p{
+  color: #8OOOOO;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.galeri{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  margin-top:15px;
+}
+
+.galeri img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+  border-radius:15px;
+  border: 2px solid #90e0ef;
+}
+
+iframe{
+  width:100%;
+  height:280px;
+  border:0;
+  border-radius:18px;
+  margin-top:15px;
+}
+
+.back{
+  display:inline-block;
+  margin-top:20px;
+  color:#8OOOOO;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* TOGGLE DARK MODE */
+#dark-toggle{
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: #0d3b66;
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+body.dark{
+  background: #8OOOOO;
+}
+body.dark .main-card, body.dark section{
+  background: rgba(26,38,58,0.95);
+  border-color: rgba(0,180,216,0.3);
+}
+body.dark .main-card h1, body.dark .section-title, body.dark section p{
+  color: #caf0f8;
+}
+body.dark section h2{color: #90e0ef}
+body.dark .btn{color: #0a192f}
+
+@media(max-width:480px){
+  .main-card h1{font-size:1.3rem}
+  .btn{font-size:0.9rem;padding:16px 8px}
+  .header-img{height:30vh}
+}
+</style>
+</head>
+<body>
+
+<button id="dark-toggle">🌙</button>
+
+<img src="sisi.jpg" class="header-img" alt="Rumah Adat di Bawomataluo">
+
+<div class="container">
+  <div class="main-card">
+    <h1>Tempat Wisata<br>Rumah Adat Desa Bawomataluo</h1>
+    <p>Rumah panggung tradisional orang Nias, khususnya Nias Selatan</p>
+  </div>
+
+  <h2 class="section-title">🏠Keindahan Rumah Adat Desa Bawomataluo🏠</h2>
+
+  <div class="btn-grid">
+    <a href="#sejarah" class="btn">📜 Sejarah</a>
+    <a href="#galeri" class="btn">🔮 Galeri</a>
+    <a href="#benefit" class="btn">✨ Benefit</a>
+    <a href="#lokasi" class="btn">📍 Lokasi</a>
+    <a href="#promosi" class="btn btn-center">💎 Promosi</a>
+    <a href="#kontak" class="btn">📞 Kontak</a>
+  </div>
+</div>
+
+<section id="sejarah">
+  <h2>📜 Sejarah Rumah Adat di Bawomataluo</h2>
+  <p>
+Rumah adat Bawomataluo (terutama Omo Sebua atau rumah raja) dibangun pada tahun 1863 olehcRaja Saonigeho di Nias Selatan. Desa lama bernama Orahili Fau dibakar habis oleh kolonial Belanda. Warga kemudian pindah ke atas bukit dan mendirikan desa baru bernama Bawomataluo (Bukit Matahari) sebagai benteng pertahanan. Omo Sebua (Rumah Besar) menjadi istana sekaligus pusat pemerintahan adat.Sementara Omo Gada adalah rumah adat untuk masyarakat biasa.Bangunan ini tahan gempa karena dibangun tanpa paku besi, melainkan menggunakan sistem pasak kayu yang fleksibel. Di halaman rumah raja terdapat tumpukan batu tinggi untuk tradisi Lompat Batu (Fahombo) yang dulu menjadi latihan prajurit perang. </p>
+  <a href="#" class="back">← Kembali</a>
+</section>
+
+<section id="galeri">
+  <h2>🖼️ Galeri Foto</h2>
+  <div class="galeri">
+    <img src="bmw1.jpg">
+    <img src="bmw2.jpg">
+    <img src="bmw3.jpg">
+    <img src="bmw4.jpg">
+  </div>
+  <a href="#" class="back">← Kembali</a>
+</section>
+
+<section id="benefit">
+  <h2>💡 Apasih keuntungan kita pergi ke desa Bawomataluo? </h2>
+  <p>1.Menyaksikan Tradisi Lompat Batu Legendaris<br>
+ 2. Melihat Megahnya Omo Sebua (Rumah Raja<br>
+ 3. Atmosfer Desa Adat Kental Sejarah <br>
+ 4.Kaya dengan Peninggalan Megalitikum<br>
+ 5.Kandidat Warisan Budaya Dunia UNESCO<br>
+  <a href="#" class="back">← Kembali</a>
+</section>
+
+<section id="lokasi">
+  <h2>📍 Lokasi</h2>
+  <p>Desa Bwaomataluo, Kecamatan Fanayama<br>Kab. Nias Selatan, Sumatera Utara</p>
+  <a href="#" class="back">← Kembali</a>
+</section>
+
+<section id="promosi">
+  <h2> 💥  Rumah Adat Bawomataluo</h2>
+  <p>Booking WA: 0822-6752-5324</p>
+  <p Apakah anda mencari destinasi yang memadukan keajaiban arsitektur purba, sejarah perlawanan yang heroik, dan tradisi ekstrem yang mendunia? Selamat datang di Desa Adat Bwoamataluo, Nias Selatan. 
+  Berdiri megah di atas bukit setinggi 324 meter di atas permukaan laut, desa ini merupakan permukiman cagar budaya nasional yang kini tengah diusulkan menjadi Situs Warisan Dunia UNESCO. Jantung daricdesa ini adalah Omo Sebua (Rumah Raja) dan deretan Omo Hada (Rumah Adat Rakyat) yang telah kokoh berdiri melintasi zaman.</p>
+  <a href="#" class="back">← Kembali</a>
+</section>
+
+<script>
+document.getElementById('dark-toggle').onclick = function(){
+  document.body.classList.toggle('dark');
+  this.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+}
+</script>
+
+<section id="kontak">
+    <h2>Kontak</h2>
+    <p>Hubungi kami melalui WhatsApp:</p>
+
+    <a href="https://wa.me/6281260274444" target="_blank">
+        📱 Chat WhatsApp
+    </a>
+</section>
+
+<style>
+#kontak {
+    text-align: center;
+    padding: 20px;
+}
+
+#kontak a {
+    background-color:pink;
+    color:black ;
+    padding: 10px -20px;
+    text-decoration: none;
+    border-radius: 5px;
+    
+   yang mana ya#kontak a {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+
+    box-shadow:
+        0 0 10px red,
+        0 0 20px red,
+        0 0 30px red;
+}
+}
+
+</style>
+  
+     <!DOCTYPE html>
+<html>
+<head>
+    <title>Lokasi Wisata</title>
+    <style>
+        body{
+            margin:0;
+            font-family:sans-serif;
+            background:linear-gradient(to right,#36d1dc,#5b86e5);
+            text-align:center;
+            color:white;
+        }
+
+        h1{
+            padding:20px;
+        }
+
+        .box{
+            margin:20px;
+            padding:20px;
+            background:rgba(255,255,255,0.2);
+            backdrop-filter:blur(10px);
+            border-radius:15px;
+        }
+
+        iframe{
+            width:90%;
+            height:300px;
+            border-radius:15px;
+            border:none;
+        }
+
+        a{
+            display:inline-block;
+            margin:20px;
+            padding:10px 20px;
+            background:white;
+            color:black;
+            border-radius:20px;
+            text-decoration:none;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>📍 Lokasi Rumah Adat Bawomataluo</h1>
+
+<div class="box">
+    <p>Kecamatan Fanayama, Kabupaten Nias Selatan, Sumatera Utara   </p>
+   
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Adat Bawomataluo</title>
+</head>
+<body>
+
+    <h1>Rumah Adat Desa Bawomataluo
+   </h1>
+
+ 
+        </div>
+
+   
+</a>
+
+<footer class="footer">
+    <p><strong>Rumah Adat</strong></p>
+    <p>📍 Rumah Adat Desa Bawomataluo, Kec. Fanayama</p>
+    <p>📞 +0822-6752-53242 </p>
+    <p>✉️info@Rumah Adat Desa Bawomataluo</p>
+</footer>
+
+<style>
+.footer {
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 15px 15px 0 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer p {
+    margin: 6px 0;
+}
+
+.footer strong {
+    color: #ffd23a;
+}
+</style>
+
+
+</body>
+</html>
